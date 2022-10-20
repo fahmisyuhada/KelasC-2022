@@ -5,6 +5,7 @@ using namespace std;
 int main(){
 	string pin;
 	double sisa;
+	double nominal;
 	int menu;
 	login: // label
 	cout << "Masukkan Pin : ";
@@ -19,7 +20,7 @@ int main(){
 		cout << "=                                ="<<endl;
 		cout << "= 1> 100.000        Cek Saldo <5 ="<<endl;
 		cout << "= 2> 200.000        Transfer  <6 ="<<endl;
-		cout << "= 3> 500.000        Penarikan <7 ="<<endl;
+		cout << "= 3> 500.000        Nabung    <7 ="<<endl;
 		cout << "= 4> 1000.000        Keluar   <8 ="<<endl;
 		cout << "=                                ="<<endl;
 		cout << "=================================="<<endl;
@@ -96,6 +97,19 @@ int main(){
 				cout << "saldo anda kurang";
 			}
 		}
+		else if(menu == 7)
+		{
+			cout << "Masukkan nominal yang di tabung : ";
+			cin >> nominal;
+			saldo = saldo + nominal;
+			cout << "Anda Menabung uang sebanyak : "<< nominal << endl;
+			cout << "Saldo anda sekarang : "<< saldo;
+		}
+		else if(menu == 8)
+		{
+			cout << "Terima kasih menggunakan atm ini";
+		}
+
 	}
 	else
 	{
